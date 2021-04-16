@@ -9,8 +9,7 @@ it('has an initial balance of zero', () => {
 
 test('it increases the balance', () => {
   const bank = new Bank();
-  const mockDeposit = jest.fn(() => this.balance += 5);
-  bank.deposit(5, mockDeposit)
-
-  expect(mockDeposit.value).toBe(5);
+  const debit= 5
+  bank.deposit(debit)
+  expect(bank.balance).toBe(0 + debit); 
 });
